@@ -4,6 +4,13 @@
 
 This is a URL shortener API built using Node.js, Express.js, and MongoDB. It allows users to create short URLs from long URLs and also update the long URL associated with a short URL. The short URLs are generated using a random string of 7 characters. The short URLs are valid for 30 days by default, but this can be changed by the user. The API also allows users to update the expiry date of a short URL.
 
+exmaples:
+```bash
+https://url-shortner-bpri.onrender.com/wJoqunz
+https://url-shortner-bpri.onrender.com/jQ3FEcv
+https://url-shortner-bpri.onrender.com/vuCK8Y3
+```
+
 ## API Reference
 
 ### Create a short URL
@@ -115,6 +122,7 @@ To deploy this project
     ```bash
     node app/index.js
     ```
+![image](https://github.com/sauravhathi/url-shortner/assets/61316762/02787ede-a4f2-47d8-8f07-1d919ffbac34)
 
 ## Run Locally
 
