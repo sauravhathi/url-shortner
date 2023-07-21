@@ -12,7 +12,6 @@ router.get('/:urlCode', async (req, res) => {
         if (existingUrl.expiresAt && existingUrl.expiresAt < new Date()) {
             return res.status(410).json({ error: 'Short URL has expired' });
         }
-        // use emojin in console
         console.log(`🚀  Redirecting to ${existingUrl.longUrl}...`);
         res.redirect(existingUrl.longUrl);
     } catch (error) {
