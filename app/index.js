@@ -1,5 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require('cors');
 const app = express();
 const shortenRoute = require('./routes/shorten');
 const updateRoute = require('./routes/update');
@@ -10,6 +11,8 @@ require('./config/database');
 
 // Load environment variables from .env file
 dotenv.config();
+
+app.use(cors());
 
 // Middleware to parse incoming requests with JSON payloads
 app.use(express.json());
