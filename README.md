@@ -20,7 +20,7 @@ POST /shorten
 
 ```json
 {
-    "shortUrl": "http://localhost:3000/abc1234"
+  "shortUrl": "http://localhost:3000/abc1234"
 }
 ```
 
@@ -39,7 +39,7 @@ PUT /update
 
 ```json
 {
-    "success": true
+  "success": true
 }
 ```
 
@@ -72,7 +72,7 @@ POST /update-expiry
 
 ```json
 {
-    "success": true
+  "success": true
 }
 ```
 
@@ -95,6 +95,26 @@ To run this project, you will need to add the following environment variables to
 `NODE_ENV` - The environment in which your API will run (`development` or `production`)
 
 `PORT` - The port on which your API will run
+
+## Deployment
+
+To deploy this project
+
+### Build Command
+
+    ```bash
+    yarn --ignore-engines
+
+    # or
+
+    npm install --ignore-engines
+    ```
+
+### Start Command
+
+    ```bash
+    node app/index.js
+    ```
 
 ## Run Locally
 
@@ -151,7 +171,7 @@ Content-Type: application/json
 
 ```json
 {
-    "shortUrl": "http://localhost:3000/abc1234"
+  "shortUrl": "http://localhost:3000/abc1234"
 }
 ```
 
@@ -173,7 +193,7 @@ Content-Type: application/json
 
 ```json
 {
-    "success": true
+  "success": true
 }
 ```
 
@@ -207,7 +227,7 @@ Content-Type: application/json
 
 ```json
 {
-    "success": true
+  "success": true
 }
 ```
 
