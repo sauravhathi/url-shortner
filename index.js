@@ -104,5 +104,5 @@ app.post('/shorten', async (req, res) => {
   }
 
   app.listen(PORT, () => {
-    console.log(`Server listening on port ${process.env.BASE_URL ? process.env.BASE_URL : 'http://localhost'}:${PORT}`);
+    console.log(`Server listening on port ${process.env.BASE_URL}`);
 });
