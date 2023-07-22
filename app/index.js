@@ -6,6 +6,7 @@ const shortenRoute = require('./routes/shorten');
 const updateRoute = require('./routes/update');
 const redirectRoute = require('./routes/redirect');
 const updateExpiryRoute = require('./routes/updateExpiry');
+const url = require('./routes/url');
 const errorHandler = require('./middleware/errorHandler');
 require('./config/database');
 
@@ -35,6 +36,7 @@ app.use('/', shortenRoute);
 app.use('/', updateRoute);
 app.use('/', redirectRoute);
 app.use('/', updateExpiryRoute);
+app.use('/', url);
 
 // Server configuration
 const PORT = process.env.PORT || 5000;
