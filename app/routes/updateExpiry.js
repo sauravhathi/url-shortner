@@ -4,13 +4,12 @@ const Url = require('../models/urlModel');
 
 router.post('/update-expiry', async (req, res) => {
     try {
-        const { shortUrl, daysToAdd } = req.body;
+        const { shortUrl, expiry } = req.body;
         const existingUrl = await Url.findOne({ shortUrl });
         if (!existingUrl) {
             return res.status(404).json({ error: 'Short URL not found' });
         }
-        const newExpiryDate = new Date(selectedDate);
-        existingUrl.expiresAt = newExpiryDate;
+        existingUrl.expiry = expiry;
         await existingUrl.save();
         res.json({ success: true });
     } catch (error) {
