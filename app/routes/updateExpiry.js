@@ -9,7 +9,7 @@ router.post('/update-expiry', async (req, res) => {
         if (!existingUrl) {
             return res.status(404).json({ error: 'Short URL not found' });
         }
-        existingUrl.expiry = expiry;
+        existingUrl.expiresAt = expiry;
         await existingUrl.save();
         res.json({ success: true });
     } catch (error) {
